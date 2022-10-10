@@ -2,7 +2,7 @@
 
 ## Summary of the Project
 This is my second project in Udacity's Data Scientist Nanodegree. It analyzes disaster data from Appen (formally Figure 8) to build a model for an API that classifies disaster messages. The project includes a web app where an emergency worker can input a new message and get classification results in several categories. It also displays visualizations of the data. Below is a screenshot of the web app's master page.
-![Web App Master Page Screenshot](http://url/to/img.png](https://github.com/LamaAlDaej/Disaster-Response-Pipeline/blob/main/web-app-screenshot.png?raw=true)
+![Web App Master Page Screenshot][(web-app-screenshot.png)]
 
 
 ### Instructions:
