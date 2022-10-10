@@ -13147,7 +13147,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries</span>
@@ -13161,7 +13161,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load messages dataset</span>
@@ -13179,7 +13179,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[164]:</div>
 
 
 
@@ -13257,7 +13257,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load categories dataset</span>
@@ -13275,7 +13275,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[165]:</div>
 
 
 
@@ -13352,7 +13352,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge datasets</span>
@@ -13370,7 +13370,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[166]:</div>
 
 
 
@@ -13466,7 +13466,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a dataframe of the 36 individual category columns</span>
@@ -13485,7 +13485,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[167]:</div>
 
 
 
@@ -13666,7 +13666,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># select the first row of the categories dataframe</span>
@@ -13675,7 +13675,6 @@ div#notebook {
 <span class="c1"># use this row to extract a list of new column names for categories.</span>
 <span class="c1"># one way is to apply a lambda function that takes everything </span>
 <span class="c1"># up to the second to last character of each string with slicing</span>
-<span class="c1"># df[&quot;name&quot;]= df.apply(lambda x: x[&#39;name&#39;].replace(&#39;testData/&#39;,&#39;&#39;), axis=1)</span>
 <span class="n">column_names_string</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="n">column_names_string</span> <span class="o">=</span> <span class="n">column_names_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-0&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
@@ -13709,7 +13708,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># rename the columns of `categories`</span>
@@ -13727,7 +13726,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[169]:</div>
 
 
 
@@ -13919,7 +13918,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">categories</span><span class="p">:</span>
@@ -13928,6 +13927,7 @@ div#notebook {
     
     <span class="c1"># convert column from string to numeric</span>
     <span class="n">categories</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+    
 <span class="n">categories</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13941,7 +13941,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[170]:</div>
 
 
 
@@ -14120,6 +14120,145 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">categories</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1    20042
+0     6140
+2      204
+Name: related, dtype: int64
+0    21873
+1     4513
+Name: request, dtype: int64
+0    26265
+1      121
+Name: offer, dtype: int64
+0    15432
+1    10954
+Name: aid_related, dtype: int64
+0    24287
+1     2099
+Name: medical_help, dtype: int64
+0    25067
+1     1319
+Name: medical_products, dtype: int64
+0    25661
+1      725
+Name: search_and_rescue, dtype: int64
+0    25915
+1      471
+Name: security, dtype: int64
+0    25523
+1      863
+Name: military, dtype: int64
+0    26386
+Name: child_alone, dtype: int64
+0    24702
+1     1684
+Name: water, dtype: int64
+0    23430
+1     2956
+Name: food, dtype: int64
+0    24044
+1     2342
+Name: shelter, dtype: int64
+0    25976
+1      410
+Name: clothing, dtype: int64
+0    25780
+1      606
+Name: money, dtype: int64
+0    26085
+1      301
+Name: missing_people, dtype: int64
+0    25506
+1      880
+Name: refugees, dtype: int64
+0    25182
+1     1204
+Name: death, dtype: int64
+0    22922
+1     3464
+Name: other_aid, dtype: int64
+0    24677
+1     1709
+Name: infrastructure_related, dtype: int64
+0    25174
+1     1212
+Name: transport, dtype: int64
+0    25041
+1     1345
+Name: buildings, dtype: int64
+0    25848
+1      538
+Name: electricity, dtype: int64
+0    26227
+1      159
+Name: tools, dtype: int64
+0    26103
+1      283
+Name: hospitals, dtype: int64
+0    26266
+1      120
+Name: shops, dtype: int64
+0    26077
+1      309
+Name: aid_centers, dtype: int64
+0    25231
+1     1155
+Name: other_infrastructure, dtype: int64
+0    19043
+1     7343
+Name: weather_related, dtype: int64
+0    24209
+1     2177
+Name: floods, dtype: int64
+0    23922
+1     2464
+Name: storm, dtype: int64
+0    26104
+1      282
+Name: fire, dtype: int64
+0    23925
+1     2461
+Name: earthquake, dtype: int64
+0    25853
+1      533
+Name: cold, dtype: int64
+0    25007
+1     1379
+Name: other_weather, dtype: int64
+0    21273
+1     5113
+Name: direct_report, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14133,7 +14272,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop the original categories column from `df`</span>
@@ -14151,7 +14290,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[172]:</div>
 
 
 
@@ -14229,7 +14368,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># concatenate the original dataframe with the new `categories` dataframe</span>
@@ -14247,7 +14386,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[173]:</div>
 
 
 
@@ -14440,7 +14579,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check number of duplicates</span>
@@ -14458,7 +14597,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[174]:</div>
 
 
 
@@ -14475,7 +14614,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop duplicates</span>
@@ -14489,7 +14628,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check number of duplicates</span>
@@ -14507,13 +14646,51 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[176]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop the rows that have related == 2</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;related&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;related&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[177]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    19906
+0     6122
+Name: related, dtype: int64</pre>
 </div>
 
 </div>
@@ -14532,7 +14709,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to find the correct file path, use the python os library:</span>
@@ -14565,15 +14742,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
 
 <span class="c1"># pd.read_sql(&quot;SELECT * FROM population_data&quot;, engine)</span>
 
-<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:////home/workspace/ETL.db&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;ETL&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:////home/workspace/DisasterResponse.db&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>

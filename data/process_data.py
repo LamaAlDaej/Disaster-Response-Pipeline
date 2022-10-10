@@ -44,7 +44,7 @@ def clean_data(df):
 
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
-
+    
     # drop the original categories column from `df`
     df = df.drop ('categories',axis=1)
     
@@ -53,6 +53,9 @@ def clean_data(df):
     
     # drop duplicates
     df = df.drop_duplicates()
+    
+    # Drop the rows that have related == 2
+    df = df[df['related'] != 2]
 
     return df
 
