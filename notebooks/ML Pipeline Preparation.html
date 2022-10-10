@@ -13147,7 +13147,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install <span class="nv">xgboost</span><span class="o">==</span><span class="m">0</span>.7.post4
@@ -13168,8 +13168,8 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: xgboost==0.7.post4 in /opt/conda/lib/python3.6/site-packages (0.7.post4)
-Requirement already satisfied: numpy in /opt/conda/lib/python3.6/site-packages (from xgboost==0.7.post4) (1.12.1)
 Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (from xgboost==0.7.post4) (1.2.1)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.6/site-packages (from xgboost==0.7.post4) (1.12.1)
 </pre>
 </div>
 </div>
@@ -13180,7 +13180,7 @@ Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries</span>
@@ -13242,12 +13242,12 @@ Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load data from database</span>
-<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:////home/workspace/ETL.db&#39;</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_table</span><span class="p">(</span><span class="s1">&#39;ETL&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:////home/workspace/DisasterResponse.db&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_table</span><span class="p">(</span><span class="s1">&#39;messages&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
 <span class="c1"># Set the message column as X</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">message</span>
 <span class="c1"># Set the other 36 categories as Y</span>
@@ -13261,7 +13261,7 @@ Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13277,7 +13277,7 @@ Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13299,7 +13299,7 @@ Name: message, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13315,7 +13315,7 @@ Name: message, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13503,7 +13503,7 @@ Name: message, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -13542,7 +13542,7 @@ Name: message, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
@@ -13567,7 +13567,7 @@ Name: message, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13602,7 +13602,7 @@ Name: message, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perform train text split</span>
@@ -13622,7 +13622,7 @@ Name: message, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13654,7 +13654,7 @@ Name: message, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predict on test data</span>
@@ -13686,290 +13686,289 @@ Name: message, dtype: object</pre>
 <pre>related :
              precision    recall  f1-score   support
 
-          0       0.65      0.48      0.55      1534
-          1       0.85      0.92      0.88      4970
-          2       0.27      0.34      0.30        50
+          0       0.62      0.47      0.54      1525
+          1       0.85      0.91      0.88      4982
 
-avg / total       0.80      0.81      0.80      6554
+avg / total       0.80      0.81      0.80      6507
 
 request :
              precision    recall  f1-score   support
 
-          0       0.90      0.98      0.93      5439
-          1       0.79      0.45      0.57      1115
+          0       0.91      0.98      0.94      5464
+          1       0.81      0.47      0.59      1043
 
-avg / total       0.88      0.89      0.87      6554
+avg / total       0.89      0.90      0.88      6507
 
 offer :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6532
-          1       0.00      0.00      0.00        22
+          0       1.00      1.00      1.00      6475
+          1       0.00      0.00      0.00        32
 
-avg / total       0.99      1.00      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_related :
              precision    recall  f1-score   support
 
-          0       0.75      0.86      0.80      3811
-          1       0.76      0.60      0.67      2743
+          0       0.75      0.85      0.80      3836
+          1       0.73      0.59      0.65      2671
 
-avg / total       0.75      0.75      0.75      6554
+avg / total       0.74      0.74      0.74      6507
 
 medical_help :
              precision    recall  f1-score   support
 
-          0       0.93      1.00      0.96      6028
-          1       0.66      0.09      0.15       526
+          0       0.93      0.99      0.96      5999
+          1       0.61      0.12      0.20       508
 
-avg / total       0.90      0.92      0.90      6554
+avg / total       0.91      0.93      0.90      6507
 
 medical_products :
              precision    recall  f1-score   support
 
-          0       0.95      1.00      0.97      6205
-          1       0.72      0.14      0.23       349
+          0       0.95      1.00      0.97      6178
+          1       0.69      0.07      0.12       329
 
-avg / total       0.94      0.95      0.94      6554
+avg / total       0.94      0.95      0.93      6507
 
 search_and_rescue :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6383
-          1       0.56      0.05      0.10       171
+          0       0.97      1.00      0.99      6334
+          1       0.60      0.05      0.10       173
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.96      0.97      0.96      6507
 
 security :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6433
-          1       0.00      0.00      0.00       121
+          0       0.98      1.00      0.99      6383
+          1       0.25      0.01      0.02       124
 
-avg / total       0.96      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 military :
              precision    recall  f1-score   support
 
-          0       0.97      1.00      0.98      6323
-          1       0.65      0.12      0.20       231
+          0       0.97      1.00      0.98      6286
+          1       0.61      0.10      0.17       221
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.96      0.97      0.96      6507
 
 child_alone :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6554
+          0       1.00      1.00      1.00      6507
 
-avg / total       1.00      1.00      1.00      6554
+avg / total       1.00      1.00      1.00      6507
 
 water :
              precision    recall  f1-score   support
 
-          0       0.96      0.99      0.98      6120
-          1       0.84      0.37      0.52       434
+          0       0.96      1.00      0.98      6102
+          1       0.87      0.34      0.48       405
 
-avg / total       0.95      0.95      0.95      6554
+avg / total       0.95      0.96      0.95      6507
 
 food :
              precision    recall  f1-score   support
 
-          0       0.93      0.99      0.96      5789
-          1       0.84      0.47      0.61       765
+          0       0.94      0.99      0.96      5818
+          1       0.83      0.46      0.59       689
 
-avg / total       0.92      0.93      0.92      6554
+avg / total       0.93      0.93      0.92      6507
 
 shelter :
              precision    recall  f1-score   support
 
-          0       0.94      0.99      0.96      5971
-          1       0.80      0.33      0.47       583
+          0       0.95      0.99      0.97      5956
+          1       0.82      0.39      0.53       551
 
-avg / total       0.93      0.93      0.92      6554
+avg / total       0.94      0.94      0.93      6507
 
 clothing :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6450
-          1       0.64      0.17      0.27       104
+          0       0.99      1.00      0.99      6425
+          1       0.82      0.11      0.19        82
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.99      0.99      0.98      6507
 
 money :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6398
-          1       1.00      0.03      0.05       156
+          0       0.98      1.00      0.99      6352
+          1       0.86      0.04      0.07       155
 
-avg / total       0.98      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 missing_people :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6468
-          1       0.00      0.00      0.00        86
+          0       0.99      1.00      0.99      6429
+          1       0.67      0.03      0.05        78
 
-avg / total       0.97      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 refugees :
              precision    recall  f1-score   support
 
-          0       0.97      1.00      0.98      6324
-          1       0.69      0.13      0.23       230
+          0       0.97      1.00      0.98      6293
+          1       0.67      0.07      0.12       214
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.96      0.97      0.96      6507
 
 death :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6263
-          1       0.83      0.12      0.21       291
+          0       0.97      1.00      0.98      6219
+          1       0.74      0.23      0.35       288
 
-avg / total       0.96      0.96      0.95      6554
+avg / total       0.96      0.96      0.95      6507
 
 other_aid :
              precision    recall  f1-score   support
 
-          0       0.87      0.99      0.93      5661
-          1       0.51      0.04      0.08       893
+          0       0.87      0.99      0.93      5635
+          1       0.59      0.05      0.09       872
 
-avg / total       0.82      0.86      0.81      6554
+avg / total       0.83      0.87      0.82      6507
 
 infrastructure_related :
              precision    recall  f1-score   support
 
-          0       0.93      1.00      0.97      6119
-          1       0.42      0.01      0.02       435
+          0       0.93      1.00      0.96      6073
+          1       0.11      0.00      0.00       434
 
-avg / total       0.90      0.93      0.90      6554
+avg / total       0.88      0.93      0.90      6507
 
 transport :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6252
-          1       0.76      0.06      0.12       302
+          0       0.95      1.00      0.97      6180
+          1       0.61      0.07      0.12       327
 
-avg / total       0.95      0.96      0.94      6554
+avg / total       0.94      0.95      0.93      6507
 
 buildings :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6237
-          1       0.72      0.15      0.25       317
+          0       0.95      1.00      0.97      6168
+          1       0.72      0.08      0.15       339
 
-avg / total       0.95      0.96      0.94      6554
+avg / total       0.94      0.95      0.93      6507
 
 electricity :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6431
-          1       1.00      0.07      0.14       123
+          0       0.98      1.00      0.99      6380
+          1       0.67      0.02      0.03       127
 
-avg / total       0.98      0.98      0.98      6554
+avg / total       0.97      0.98      0.97      6507
 
 tools :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6515
-          1       0.00      0.00      0.00        39
+          0       0.99      1.00      1.00      6462
+          1       0.00      0.00      0.00        45
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      0.99      0.99      6507
 
 hospitals :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6474
-          1       0.00      0.00      0.00        80
+          0       0.99      1.00      0.99      6429
+          1       0.00      0.00      0.00        78
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 shops :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6519
-          1       0.00      0.00      0.00        35
+          0       1.00      1.00      1.00      6481
+          1       0.00      0.00      0.00        26
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_centers :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6466
-          1       0.00      0.00      0.00        88
+          0       0.99      1.00      0.99      6423
+          1       0.00      0.00      0.00        84
 
-avg / total       0.97      0.99      0.98      6554
+avg / total       0.97      0.99      0.98      6507
 
 other_infrastructure :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6273
-          1       0.11      0.00      0.01       281
+          0       0.95      1.00      0.98      6211
+          1       0.00      0.00      0.00       296
 
-avg / total       0.92      0.96      0.94      6554
+avg / total       0.91      0.95      0.93      6507
 
 weather_related :
              precision    recall  f1-score   support
 
-          0       0.87      0.95      0.91      4784
-          1       0.83      0.61      0.70      1770
+          0       0.86      0.96      0.91      4628
+          1       0.85      0.62      0.72      1879
 
-avg / total       0.86      0.86      0.85      6554
+avg / total       0.86      0.86      0.85      6507
 
 floods :
              precision    recall  f1-score   support
 
-          0       0.94      1.00      0.97      5985
-          1       0.94      0.32      0.48       569
+          0       0.94      1.00      0.97      5941
+          1       0.88      0.34      0.49       566
 
-avg / total       0.94      0.94      0.93      6554
+avg / total       0.94      0.94      0.93      6507
 
 storm :
              precision    recall  f1-score   support
 
-          0       0.94      0.99      0.96      5956
-          1       0.75      0.40      0.52       598
+          0       0.94      0.99      0.96      5881
+          1       0.79      0.38      0.52       626
 
-avg / total       0.93      0.93      0.92      6554
+avg / total       0.92      0.93      0.92      6507
 
 fire :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6486
-          1       1.00      0.01      0.03        68
+          0       0.99      1.00      0.99      6432
+          1       1.00      0.01      0.03        75
 
-avg / total       0.99      0.99      0.98      6554
+avg / total       0.99      0.99      0.98      6507
 
 earthquake :
              precision    recall  f1-score   support
 
-          0       0.98      0.99      0.99      5979
-          1       0.90      0.81      0.85       575
+          0       0.97      0.99      0.98      5860
+          1       0.89      0.69      0.78       647
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.96      0.96      0.96      6507
 
 cold :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6417
-          1       0.68      0.14      0.23       137
+          0       0.98      1.00      0.99      6385
+          1       0.59      0.16      0.25       122
 
-avg / total       0.98      0.98      0.97      6554
+avg / total       0.98      0.98      0.98      6507
 
 other_weather :
              precision    recall  f1-score   support
 
-          0       0.95      1.00      0.97      6229
-          1       0.49      0.06      0.10       325
+          0       0.95      1.00      0.97      6180
+          1       0.46      0.03      0.06       327
 
-avg / total       0.93      0.95      0.93      6554
+avg / total       0.93      0.95      0.93      6507
 
 direct_report :
              precision    recall  f1-score   support
 
-          0       0.86      0.97      0.91      5310
-          1       0.71      0.32      0.44      1244
+          0       0.87      0.97      0.92      5298
+          1       0.73      0.35      0.47      1209
 
-avg / total       0.83      0.85      0.82      6554
+avg / total       0.84      0.85      0.83      6507
 
 </pre>
 </div>
@@ -13989,7 +13988,7 @@ avg / total       0.83      0.85      0.82      6554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># References:</span>
@@ -14023,7 +14022,7 @@ avg / total       0.83      0.85      0.82      6554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">display_results</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
@@ -14044,7 +14043,7 @@ avg / total       0.83      0.85      0.82      6554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fit the tuned model</span>
@@ -14061,7 +14060,7 @@ avg / total       0.83      0.85      0.82      6554
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -14090,7 +14089,7 @@ avg / total       0.83      0.85      0.82      6554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predict on test data</span>
@@ -14104,7 +14103,7 @@ avg / total       0.83      0.85      0.82      6554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results</span>
@@ -14128,327 +14127,326 @@ avg / total       0.83      0.85      0.82      6554
 <pre>related :
              precision    recall  f1-score   support
 
-          0       0.63      0.45      0.53      1534
-          1       0.84      0.92      0.88      4970
-          2       0.47      0.14      0.22        50
+          0       0.62      0.46      0.53      1525
+          1       0.85      0.91      0.88      4982
 
-avg / total       0.79      0.80      0.79      6554
+avg / total       0.79      0.81      0.80      6507
 
 request :
              precision    recall  f1-score   support
 
-          0       0.89      0.98      0.93      5439
-          1       0.80      0.43      0.56      1115
+          0       0.90      0.98      0.94      5464
+          1       0.81      0.45      0.58      1043
 
-avg / total       0.88      0.89      0.87      6554
+avg / total       0.89      0.90      0.88      6507
 
 offer :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6532
-          1       0.00      0.00      0.00        22
+          0       1.00      1.00      1.00      6475
+          1       0.00      0.00      0.00        32
 
-avg / total       0.99      1.00      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_related :
              precision    recall  f1-score   support
 
-          0       0.74      0.85      0.79      3811
-          1       0.74      0.59      0.66      2743
+          0       0.75      0.87      0.81      3836
+          1       0.76      0.59      0.66      2671
 
-avg / total       0.74      0.74      0.74      6554
+avg / total       0.75      0.75      0.75      6507
 
 medical_help :
              precision    recall  f1-score   support
 
-          0       0.92      0.99      0.96      6028
-          1       0.54      0.07      0.13       526
+          0       0.93      0.99      0.96      5999
+          1       0.61      0.13      0.21       508
 
-avg / total       0.89      0.92      0.89      6554
+avg / total       0.91      0.93      0.90      6507
 
 medical_products :
              precision    recall  f1-score   support
 
-          0       0.95      1.00      0.97      6205
-          1       0.61      0.06      0.10       349
+          0       0.95      1.00      0.98      6178
+          1       0.69      0.07      0.13       329
 
-avg / total       0.93      0.95      0.93      6554
+avg / total       0.94      0.95      0.93      6507
 
 search_and_rescue :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6383
-          1       0.63      0.07      0.13       171
+          0       0.97      1.00      0.99      6334
+          1       0.73      0.05      0.09       173
 
-avg / total       0.97      0.97      0.96      6554
+avg / total       0.97      0.97      0.96      6507
 
 security :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6433
-          1       0.17      0.01      0.02       121
+          0       0.98      1.00      0.99      6383
+          1       0.43      0.02      0.05       124
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 military :
              precision    recall  f1-score   support
 
-          0       0.97      1.00      0.98      6323
-          1       0.38      0.03      0.06       231
+          0       0.97      1.00      0.98      6286
+          1       0.70      0.10      0.18       221
 
-avg / total       0.95      0.96      0.95      6554
+avg / total       0.96      0.97      0.96      6507
 
 child_alone :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6554
+          0       1.00      1.00      1.00      6507
 
-avg / total       1.00      1.00      1.00      6554
+avg / total       1.00      1.00      1.00      6507
 
 water :
              precision    recall  f1-score   support
 
-          0       0.95      1.00      0.97      6120
-          1       0.85      0.30      0.44       434
+          0       0.96      1.00      0.98      6102
+          1       0.84      0.33      0.47       405
 
-avg / total       0.95      0.95      0.94      6554
+avg / total       0.95      0.95      0.94      6507
 
 food :
              precision    recall  f1-score   support
 
-          0       0.94      0.99      0.96      5789
-          1       0.82      0.51      0.63       765
+          0       0.94      0.99      0.97      5818
+          1       0.82      0.51      0.63       689
 
-avg / total       0.92      0.93      0.92      6554
+avg / total       0.93      0.94      0.93      6507
 
 shelter :
              precision    recall  f1-score   support
 
-          0       0.94      0.99      0.97      5971
-          1       0.79      0.36      0.49       583
+          0       0.94      0.99      0.97      5956
+          1       0.80      0.31      0.44       551
 
-avg / total       0.93      0.93      0.92      6554
+avg / total       0.93      0.93      0.92      6507
 
 clothing :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6450
-          1       0.67      0.19      0.30       104
+          0       0.99      1.00      0.99      6425
+          1       0.70      0.09      0.15        82
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 money :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6398
-          1       0.67      0.03      0.05       156
+          0       0.98      1.00      0.99      6352
+          1       0.67      0.01      0.03       155
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 missing_people :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6468
-          1       0.00      0.00      0.00        86
+          0       0.99      1.00      0.99      6429
+          1       1.00      0.01      0.03        78
 
-avg / total       0.97      0.99      0.98      6554
+avg / total       0.99      0.99      0.98      6507
 
 refugees :
              precision    recall  f1-score   support
 
-          0       0.97      1.00      0.98      6324
-          1       0.58      0.06      0.11       230
+          0       0.97      1.00      0.98      6293
+          1       0.67      0.02      0.04       214
 
-avg / total       0.95      0.97      0.95      6554
+avg / total       0.96      0.97      0.95      6507
 
 death :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6263
-          1       0.77      0.16      0.27       291
+          0       0.96      1.00      0.98      6219
+          1       0.79      0.15      0.26       288
 
-avg / total       0.95      0.96      0.95      6554
+avg / total       0.95      0.96      0.95      6507
 
 other_aid :
              precision    recall  f1-score   support
 
-          0       0.87      0.99      0.93      5661
-          1       0.49      0.05      0.09       893
+          0       0.87      0.99      0.93      5635
+          1       0.57      0.05      0.09       872
 
-avg / total       0.82      0.86      0.81      6554
+avg / total       0.83      0.87      0.82      6507
 
 infrastructure_related :
              precision    recall  f1-score   support
 
-          0       0.93      1.00      0.97      6119
-          1       0.00      0.00      0.00       435
+          0       0.93      1.00      0.96      6073
+          1       0.14      0.00      0.01       434
 
-avg / total       0.87      0.93      0.90      6554
+avg / total       0.88      0.93      0.90      6507
 
 transport :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6252
-          1       0.77      0.08      0.14       302
+          0       0.95      1.00      0.98      6180
+          1       0.69      0.10      0.18       327
 
-avg / total       0.95      0.96      0.94      6554
+avg / total       0.94      0.95      0.94      6507
 
 buildings :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6237
-          1       0.70      0.12      0.20       317
+          0       0.95      1.00      0.97      6168
+          1       0.67      0.12      0.20       339
 
-avg / total       0.94      0.95      0.94      6554
+avg / total       0.94      0.95      0.93      6507
 
 electricity :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6431
-          1       0.80      0.03      0.06       123
+          0       0.98      1.00      0.99      6380
+          1       0.50      0.04      0.07       127
 
-avg / total       0.98      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 tools :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6515
-          1       0.00      0.00      0.00        39
+          0       0.99      1.00      1.00      6462
+          1       0.00      0.00      0.00        45
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      0.99      0.99      6507
 
 hospitals :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6474
-          1       0.00      0.00      0.00        80
+          0       0.99      1.00      0.99      6429
+          1       0.00      0.00      0.00        78
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 shops :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6519
-          1       0.00      0.00      0.00        35
+          0       1.00      1.00      1.00      6481
+          1       0.00      0.00      0.00        26
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_centers :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6466
-          1       0.00      0.00      0.00        88
+          0       0.99      1.00      0.99      6423
+          1       0.00      0.00      0.00        84
 
-avg / total       0.97      0.99      0.98      6554
+avg / total       0.97      0.99      0.98      6507
 
 other_infrastructure :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6273
-          1       0.25      0.01      0.01       281
+          0       0.95      1.00      0.98      6211
+          1       0.08      0.00      0.01       296
 
-avg / total       0.93      0.96      0.94      6554
+avg / total       0.91      0.95      0.93      6507
 
 weather_related :
              precision    recall  f1-score   support
 
-          0       0.87      0.95      0.91      4784
-          1       0.82      0.62      0.71      1770
+          0       0.86      0.96      0.91      4628
+          1       0.86      0.61      0.71      1879
 
-avg / total       0.86      0.86      0.85      6554
+avg / total       0.86      0.86      0.85      6507
 
 floods :
              precision    recall  f1-score   support
 
-          0       0.94      1.00      0.97      5985
-          1       0.94      0.37      0.53       569
+          0       0.94      0.99      0.97      5941
+          1       0.86      0.33      0.48       566
 
-avg / total       0.94      0.94      0.93      6554
+avg / total       0.93      0.94      0.92      6507
 
 storm :
              precision    recall  f1-score   support
 
-          0       0.94      0.99      0.96      5956
-          1       0.71      0.36      0.48       598
+          0       0.94      0.99      0.96      5881
+          1       0.74      0.37      0.49       626
 
-avg / total       0.92      0.93      0.92      6554
+avg / total       0.92      0.93      0.92      6507
 
 fire :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6486
-          1       1.00      0.01      0.03        68
+          0       0.99      1.00      0.99      6432
+          1       0.00      0.00      0.00        75
 
-avg / total       0.99      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 earthquake :
              precision    recall  f1-score   support
 
-          0       0.97      0.99      0.98      5979
-          1       0.88      0.71      0.79       575
+          0       0.97      0.99      0.98      5860
+          1       0.91      0.74      0.81       647
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.96      0.97      0.96      6507
 
 cold :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6417
-          1       0.69      0.13      0.22       137
+          0       0.98      1.00      0.99      6385
+          1       0.81      0.11      0.19       122
 
-avg / total       0.98      0.98      0.97      6554
+avg / total       0.98      0.98      0.98      6507
 
 other_weather :
              precision    recall  f1-score   support
 
-          0       0.95      1.00      0.97      6229
-          1       0.55      0.05      0.09       325
+          0       0.95      1.00      0.97      6180
+          1       0.55      0.03      0.06       327
 
-avg / total       0.93      0.95      0.93      6554
+avg / total       0.93      0.95      0.93      6507
 
 direct_report :
              precision    recall  f1-score   support
 
-          0       0.86      0.96      0.91      5310
-          1       0.67      0.31      0.42      1244
+          0       0.86      0.96      0.91      5298
+          1       0.68      0.33      0.45      1209
 
-avg / total       0.82      0.84      0.81      6554
+avg / total       0.83      0.85      0.82      6507
 
-Accuracy: related                   0.803326
-request                   0.885108
-offer                     0.996643
-aid_related               0.741837
-medical_help              0.920507
-medical_products          0.947818
-search_and_rescue         0.974672
-security                  0.980928
-military                  0.963991
+Accuracy: related                   0.807131
+request                   0.895190
+offer                     0.995082
+aid_related               0.752574
+medical_help              0.925619
+medical_products          0.951437
+search_and_rescue         0.974182
+security                  0.980790
+military                  0.968034
 child_alone               1.000000
-water                     0.950107
-food                      0.929661
-shelter                   0.934544
-clothing                  0.985658
-money                     0.976503
-missing_people            0.986726
-refugees                  0.965517
-death                     0.960787
-other_aid                 0.863442
-infrastructure_related    0.932713
-transport                 0.956363
-buildings                 0.954989
-electricity               0.981691
-tools                     0.994049
-hospitals                 0.987794
-shops                     0.994660
-aid_centers               0.986573
-other_infrastructure      0.956515
-weather_related           0.860696
-floods                    0.943241
-storm                     0.928135
-fire                      0.989777
-earthquake                0.966280
-cold                      0.980623
-other_weather             0.950870
-direct_report             0.839945
+water                     0.954203
+food                      0.936223
+shelter                   0.934993
+clothing                  0.988013
+money                     0.976333
+missing_people            0.988167
+refugees                  0.967420
+death                     0.960658
+other_aid                 0.867681
+infrastructure_related    0.931766
+transport                 0.952513
+buildings                 0.950976
+electricity               0.980483
+tools                     0.992931
+hospitals                 0.988013
+shops                     0.996004
+aid_centers               0.987091
+other_infrastructure      0.952974
+weather_related           0.857077
+floods                    0.937452
+storm                     0.926848
+fire                      0.988474
+earthquake                0.966190
+cold                      0.982788
+other_weather             0.950054
+direct_report             0.846473
 dtype: float64
 
 Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
@@ -14473,7 +14471,7 @@ Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change the machine learning algorithm to be XGBoost</span>
@@ -14503,7 +14501,7 @@ Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fit the improved tuned model</span>
@@ -14520,7 +14518,7 @@ Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14549,7 +14547,7 @@ Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predict on test data</span>
@@ -14576,327 +14574,326 @@ Best Parameters: {&#39;clf__estimator__n_estimators&#39;: 10}
 <pre>related :
              precision    recall  f1-score   support
 
-          0       0.63      0.08      0.14      1534
-          1       0.77      0.99      0.86      4970
-          2       0.00      0.00      0.00        50
+          0       0.73      0.05      0.09      1525
+          1       0.77      0.99      0.87      4982
 
-avg / total       0.73      0.77      0.69      6554
+avg / total       0.76      0.77      0.69      6507
 
 request :
              precision    recall  f1-score   support
 
-          0       0.87      0.98      0.93      5439
-          1       0.79      0.31      0.44      1115
+          0       0.88      0.99      0.93      5464
+          1       0.80      0.29      0.43      1043
 
-avg / total       0.86      0.87      0.84      6554
+avg / total       0.87      0.87      0.85      6507
 
 offer :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6532
-          1       0.00      0.00      0.00        22
+          0       1.00      1.00      1.00      6475
+          1       0.00      0.00      0.00        32
 
-avg / total       0.99      1.00      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_related :
              precision    recall  f1-score   support
 
-          0       0.68      0.87      0.76      3811
-          1       0.70      0.42      0.53      2743
+          0       0.68      0.88      0.77      3836
+          1       0.71      0.41      0.52      2671
 
-avg / total       0.69      0.68      0.66      6554
+avg / total       0.69      0.69      0.66      6507
 
 medical_help :
              precision    recall  f1-score   support
 
-          0       0.93      0.99      0.96      6028
-          1       0.67      0.15      0.24       526
+          0       0.93      0.99      0.96      5999
+          1       0.64      0.10      0.18       508
 
-avg / total       0.91      0.93      0.90      6554
+avg / total       0.91      0.93      0.90      6507
 
 medical_products :
              precision    recall  f1-score   support
 
-          0       0.96      0.99      0.98      6205
-          1       0.72      0.25      0.37       349
+          0       0.96      1.00      0.98      6178
+          1       0.72      0.22      0.33       329
 
-avg / total       0.95      0.95      0.94      6554
+avg / total       0.95      0.96      0.94      6507
 
 search_and_rescue :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6383
-          1       0.58      0.21      0.31       171
+          0       0.98      1.00      0.99      6334
+          1       0.53      0.16      0.25       173
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.97      0.97      0.97      6507
 
 security :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6433
-          1       0.17      0.01      0.02       121
+          0       0.98      1.00      0.99      6383
+          1       1.00      0.01      0.02       124
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.98      0.98      0.97      6507
 
 military :
              precision    recall  f1-score   support
 
-          0       0.97      1.00      0.98      6323
-          1       0.77      0.04      0.08       231
+          0       0.97      0.99      0.98      6286
+          1       0.51      0.26      0.34       221
 
-avg / total       0.96      0.97      0.95      6554
+avg / total       0.96      0.97      0.96      6507
 
 child_alone :
              precision    recall  f1-score   support
 
-          0       1.00      1.00      1.00      6554
+          0       1.00      1.00      1.00      6507
 
-avg / total       1.00      1.00      1.00      6554
+avg / total       1.00      1.00      1.00      6507
 
 water :
              precision    recall  f1-score   support
 
-          0       0.97      0.99      0.98      6120
-          1       0.86      0.51      0.64       434
+          0       0.97      0.99      0.98      6102
+          1       0.85      0.46      0.59       405
 
-avg / total       0.96      0.96      0.96      6554
+avg / total       0.96      0.96      0.96      6507
 
 food :
              precision    recall  f1-score   support
 
-          0       0.97      0.97      0.97      5789
-          1       0.79      0.77      0.78       765
+          0       0.97      0.97      0.97      5818
+          1       0.78      0.77      0.77       689
 
-avg / total       0.95      0.95      0.95      6554
+avg / total       0.95      0.95      0.95      6507
 
 shelter :
              precision    recall  f1-score   support
 
-          0       0.95      0.99      0.97      5971
-          1       0.81      0.46      0.59       583
+          0       0.96      0.99      0.97      5956
+          1       0.83      0.50      0.63       551
 
-avg / total       0.94      0.94      0.93      6554
+avg / total       0.95      0.95      0.94      6507
 
 clothing :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6450
-          1       0.66      0.52      0.58       104
+          0       0.99      1.00      1.00      6425
+          1       0.71      0.56      0.63        82
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      0.99      0.99      6507
 
 money :
              precision    recall  f1-score   support
 
-          0       0.98      1.00      0.99      6398
-          1       0.73      0.10      0.18       156
+          0       0.98      1.00      0.99      6352
+          1       0.68      0.08      0.15       155
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.97      0.98      0.97      6507
 
 missing_people :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6468
-          1       0.70      0.22      0.34        86
+          0       0.99      1.00      0.99      6429
+          1       0.50      0.05      0.09        78
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.98      0.99      0.98      6507
 
 refugees :
              precision    recall  f1-score   support
 
-          0       0.97      0.99      0.98      6324
-          1       0.64      0.25      0.36       230
+          0       0.98      1.00      0.99      6293
+          1       0.74      0.30      0.43       214
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.97      0.97      0.97      6507
 
 death :
              precision    recall  f1-score   support
 
-          0       0.97      0.99      0.98      6263
-          1       0.75      0.34      0.47       291
+          0       0.97      0.99      0.98      6219
+          1       0.69      0.40      0.51       288
 
-avg / total       0.96      0.97      0.96      6554
+avg / total       0.96      0.97      0.96      6507
 
 other_aid :
              precision    recall  f1-score   support
 
-          0       0.87      0.99      0.93      5661
-          1       0.47      0.07      0.13       893
+          0       0.87      1.00      0.93      5635
+          1       0.59      0.02      0.04       872
 
-avg / total       0.82      0.86      0.82      6554
+avg / total       0.83      0.87      0.81      6507
 
 infrastructure_related :
              precision    recall  f1-score   support
 
-          0       0.93      1.00      0.97      6119
-          1       0.44      0.02      0.03       435
+          0       0.93      1.00      0.97      6073
+          1       0.69      0.02      0.04       434
 
-avg / total       0.90      0.93      0.90      6554
+avg / total       0.92      0.93      0.90      6507
 
 transport :
              precision    recall  f1-score   support
 
-          0       0.96      0.99      0.98      6252
-          1       0.55      0.25      0.35       302
+          0       0.96      0.99      0.98      6180
+          1       0.68      0.29      0.41       327
 
-avg / total       0.95      0.96      0.95      6554
+avg / total       0.95      0.96      0.95      6507
 
 buildings :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6237
-          1       0.78      0.15      0.24       317
+          0       0.96      1.00      0.98      6168
+          1       0.82      0.15      0.25       339
 
-avg / total       0.95      0.96      0.94      6554
+avg / total       0.95      0.95      0.94      6507
 
 electricity :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6431
-          1       0.64      0.33      0.44       123
+          0       0.99      1.00      0.99      6380
+          1       0.56      0.28      0.37       127
 
-avg / total       0.98      0.98      0.98      6554
+avg / total       0.98      0.98      0.98      6507
 
 tools :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6515
-          1       0.33      0.03      0.05        39
+          0       0.99      1.00      1.00      6462
+          1       0.50      0.02      0.04        45
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      0.99      0.99      6507
 
 hospitals :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6474
-          1       0.58      0.09      0.15        80
+          0       0.99      1.00      0.99      6429
+          1       0.67      0.05      0.10        78
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 shops :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6519
-          1       1.00      0.03      0.06        35
+          0       1.00      1.00      1.00      6481
+          1       0.00      0.00      0.00        26
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      1.00      0.99      6507
 
 aid_centers :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6466
-          1       0.40      0.02      0.04        88
+          0       0.99      1.00      0.99      6423
+          1       0.50      0.06      0.11        84
 
-avg / total       0.98      0.99      0.98      6554
+avg / total       0.98      0.99      0.98      6507
 
 other_infrastructure :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      6273
-          1       0.50      0.01      0.03       281
+          0       0.95      1.00      0.98      6211
+          1       0.33      0.01      0.02       296
 
-avg / total       0.94      0.96      0.94      6554
+avg / total       0.93      0.95      0.93      6507
 
 weather_related :
              precision    recall  f1-score   support
 
-          0       0.82      0.98      0.89      4784
-          1       0.90      0.40      0.56      1770
+          0       0.81      0.98      0.89      4628
+          1       0.91      0.42      0.58      1879
 
-avg / total       0.84      0.83      0.80      6554
+avg / total       0.84      0.82      0.80      6507
 
 floods :
              precision    recall  f1-score   support
 
-          0       0.96      1.00      0.98      5985
-          1       0.94      0.51      0.66       569
+          0       0.95      1.00      0.97      5941
+          1       0.91      0.47      0.62       566
 
-avg / total       0.95      0.95      0.95      6554
+avg / total       0.95      0.95      0.94      6507
 
 storm :
              precision    recall  f1-score   support
 
-          0       0.95      0.98      0.97      5956
-          1       0.75      0.49      0.59       598
+          0       0.95      0.98      0.97      5881
+          1       0.78      0.52      0.63       626
 
-avg / total       0.93      0.94      0.93      6554
+avg / total       0.93      0.94      0.93      6507
 
 fire :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      1.00      6486
-          1       0.64      0.34      0.44        68
+          0       0.99      1.00      0.99      6432
+          1       0.56      0.36      0.44        75
 
-avg / total       0.99      0.99      0.99      6554
+avg / total       0.99      0.99      0.99      6507
 
 earthquake :
              precision    recall  f1-score   support
 
-          0       0.98      0.99      0.99      5979
-          1       0.89      0.82      0.85       575
+          0       0.98      0.99      0.98      5860
+          1       0.91      0.81      0.86       647
 
-avg / total       0.97      0.98      0.97      6554
+avg / total       0.97      0.97      0.97      6507
 
 cold :
              precision    recall  f1-score   support
 
-          0       0.99      1.00      0.99      6417
-          1       0.59      0.29      0.39       137
+          0       0.99      1.00      0.99      6385
+          1       0.63      0.22      0.33       122
 
-avg / total       0.98      0.98      0.98      6554
+avg / total       0.98      0.98      0.98      6507
 
 other_weather :
              precision    recall  f1-score   support
 
-          0       0.96      0.99      0.98      6229
-          1       0.55      0.17      0.26       325
+          0       0.96      0.99      0.97      6180
+          1       0.56      0.17      0.27       327
 
-avg / total       0.94      0.95      0.94      6554
+avg / total       0.94      0.95      0.94      6507
 
 direct_report :
              precision    recall  f1-score   support
 
-          0       0.85      0.96      0.90      5310
-          1       0.63      0.29      0.40      1244
+          0       0.85      0.98      0.91      5298
+          1       0.74      0.23      0.36      1209
 
-avg / total       0.81      0.83      0.81      6554
+avg / total       0.83      0.84      0.81      6507
 
-Accuracy: related                   0.765944
-request                   0.868477
-offer                     0.996643
-aid_related               0.683552
-medical_help              0.925847
-medical_products          0.954837
-search_and_rescue         0.975435
-security                  0.980928
-military                  0.965822
+Accuracy: related                   0.772706
+request                   0.874904
+offer                     0.995082
+aid_related               0.686799
+medical_help              0.925465
+medical_products          0.956047
+search_and_rescue         0.973874
+security                  0.981097
+military                  0.966344
 child_alone               1.000000
-water                     0.962161
-food                      0.949344
-shelter                   0.942173
-clothing                  0.988099
-money                     0.977724
-missing_people            0.988557
-refugees                  0.968874
-death                     0.965670
-other_aid                 0.862527
-infrastructure_related    0.933323
-transport                 0.956057
-buildings                 0.956668
-electricity               0.983979
-tools                     0.993897
-hospitals                 0.988099
-shops                     0.994812
-aid_centers               0.986421
-other_infrastructure      0.957125
-weather_related           0.827281
-floods                    0.954837
-storm                     0.938358
-fire                      0.991150
-earthquake                0.975282
-cold                      0.980928
-other_weather             0.951938
-direct_report             0.833384
+water                     0.961272
+food                      0.952052
+shelter                   0.949285
+clothing                  0.991548
+money                     0.977255
+missing_people            0.988013
+refugees                  0.973567
+death                     0.965576
+other_aid                 0.866913
+infrastructure_related    0.934071
+transport                 0.957584
+buildings                 0.954049
+electricity               0.981558
+tools                     0.993084
+hospitals                 0.988320
+shops                     0.995082
+aid_centers               0.987091
+other_infrastructure      0.954049
+weather_related           0.820347
+floods                    0.949746
+storm                     0.939911
+fire                      0.989396
+earthquake                0.972799
+cold                      0.982941
+other_weather             0.951591
+direct_report             0.842170
 dtype: float64
 
 Best Parameters: {&#39;clf__estimator__learning_rate&#39;: 0.01, &#39;clf__estimator__n_estimators&#39;: 10}
@@ -14917,7 +14914,7 @@ Best Parameters: {&#39;clf__estimator__learning_rate&#39;: 0.01, &#39;clf__estim
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I chose the tuned model since it performance is better than the others.</span>
